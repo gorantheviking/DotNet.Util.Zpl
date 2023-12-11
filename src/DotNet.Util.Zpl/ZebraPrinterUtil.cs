@@ -158,6 +158,10 @@ namespace DotNet.Util
         /// 日志保存目录，WEB应用注意不能放在BIN目录下。  
         /// </summary>  
         public static string LogsDirectory { get; set; }
+        /// <summary>  
+        /// Expose print queue document name when printing with driver
+        /// </summary>  
+        public static string DocumentName { get; set; } = ".NET RAW Document";
         /// <summary>
         /// 图形缓存
         /// </summary>
@@ -204,7 +208,7 @@ namespace DotNet.Util
             DocInfo docInfo = new DocInfo();
             bool bSuccess = false;
 
-            docInfo.DocName = ".NET RAW Document";
+            docInfo.DocName = DocumentName;
             docInfo.DataType = "RAW";
 
             // Open the printer.  
